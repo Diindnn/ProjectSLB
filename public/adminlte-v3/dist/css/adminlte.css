@@ -24,7 +24,7 @@
   --white: #ffffff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: #315E77;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -165,7 +165,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #0E3C57;
   text-decoration: none;
 }
 
@@ -12938,7 +12938,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 508px) {
   .sidebar-mini.sidebar-collapse .main-sidebar {
     box-shadow: none !important;
   }

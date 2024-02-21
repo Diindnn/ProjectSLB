@@ -1,7 +1,6 @@
  <!-- /.content-wrapper -->
  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
+    <strong>SLB Insan Prima Bestari <a href="http://adminlte.io"></a></strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.4
     </div>
@@ -49,5 +48,11 @@
 <script src="{{asset('adminlte-v3')}}/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('adminlte-v3')}}/dist/js/demo.js"></script>
+
+<!-- DataTables -->
+<script src="{{asset('adminlte-v3')}}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{asset('adminlte-v3')}}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{asset('adminlte-v3')}}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{asset('adminlte-v3')}}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 </body>
 </html>
