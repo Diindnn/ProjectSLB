@@ -66,7 +66,13 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary"
+                                        style="background-color: blue; color: white; transition: background-color 0.3s;"
+                                        onmouseover="this.style.backgroundColor='darkblue'"
+                                        onmouseout="this.style.backgroundColor='blue'">
+                                        Submit
+                                    </button>
+
                                 </div>
                                 <!-- Pop-up berhasil ditambahkan -->
                                 <div class="modal fade" id="successModal" tabindex="-1" role="dialog"
@@ -110,7 +116,7 @@
                         document.addEventListener("DOMContentLoaded", function() {
                             document.getElementById("addTeacherForm").addEventListener("submit", function(event) {
                                 event.preventDefault(); // menghentikan pengiriman formulir
-                                // Tampilkan pop-up berhasil
+                                // Tampilkan pop-up berhasilMIT
                                 $('#successModal').modal('show');
                                 // Anda juga bisa menambahkan logika lain di sini, seperti mengirimkan data formulir ke server menggunakan AJAX
                             });

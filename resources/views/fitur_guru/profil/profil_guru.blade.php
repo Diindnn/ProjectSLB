@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.layout_guru.master_guru')
 
-@section('content')
+@section('content_guru')
+
 <style>
     .profile-grid {
         display: grid;
@@ -21,7 +22,7 @@
     }
 
     .profile-icon {
-        font-size: 80px; /* Ukuran ikon */
+        font-size: 120px; /* Ukuran ikon */
         margin-bottom: 5px; /* Jarak antara ikon dan tulisan */
         align-content: center;
        color: #999696
@@ -38,9 +39,9 @@
     }
 
     .profile-box {
-    width: 120px;
-    height: 150px;
-    border: 2px solid #ccc;
+    width: 150px;
+    height: 190px;
+    border: 4px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     display: flex;
@@ -68,9 +69,6 @@
         font-weight: 10; /* Mengatur ketebalan font menjadi normal */
 
     }
-
-
-
 </style>
 
 
@@ -83,10 +81,9 @@
             <div class="col-sm-6">
                 <h1>
                     <a href="{{ url()->previous() }}" class="text-dark" style="font-size: 17px;">
-                        <i class="fas fa-arrow-left" style="padding-right: 15px;"></i></a>Tambah Data Guru
+                        <i class="fas fa-arrow-left" style="padding-right: 15px;"></i></a>Profil Guru
                 </h1>
             </div>
-
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Tambah Data</a></li>
@@ -191,10 +188,6 @@
         <!-- /.card-footer -->
                     </form>
                 </div>
-
-
-
-
 <script>
     function previewImage(event) {
         var reader = new FileReader();
@@ -214,12 +207,6 @@
                             });
                         });
 </script>
-
-
-
-
-
-
 
 
               <!-- /.card -->

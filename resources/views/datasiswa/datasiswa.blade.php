@@ -124,7 +124,7 @@
                                         <td>Tunagrahita</td>
                                         <td>5</td>
                                         <td>
-                                            <a href="{{ route('editsiswa') }}" class="btn btn-success btn-sm">
+                                            <a href="{{ route('detailsiswa') }}" class="btn btn-success btn-sm">
                                                 <i class="fas fa-info-circle"></i> Detail
                                             </a>
                                             <a href="{{ route('editsiswa') }}" class="btn btn-info btn-sm">
@@ -142,7 +142,7 @@
                                         <td>Tunagrahita</td>
                                         <td>5</td>
                                         <td>
-                                            <a href="{{ route('editsiswa') }}" class="btn btn-success btn-sm">
+                                            <a href="{{ route('detailsiswa') }}" class="btn btn-success btn-sm">
                                                 <i class="fas fa-info-circle"></i> Detail
                                             </a>
                                             <a href="{{ route('editsiswa') }}" class="btn btn-info btn-sm">

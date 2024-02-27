@@ -45,8 +45,8 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview ">
-            <a href="{{ url('/') }}" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{ url('/admin') }}" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">
+                <i class="fas fa-home nav-icon"></i>
               <p>
                 Dashboard
               </p>
@@ -54,7 +54,7 @@
 
           </li>
           <li class="nav-item">
-            <a href="{{ url('/dataguru') }}" class="nav-link {{ request()->is('dataguru') || request()->is('tambahdataguru')   ? 'active' : '' }}">
+            <a href="{{ url('/dataguru') }}" class="nav-link {{ request()->is('dataguru') || request()->is('tambahdataguru') || request()->is('detailguru') || request()->is('editguru')    ? 'active' : '' }}">
               <i class="nav-icon fas fa-solid fa-user-tie"></i>
               <p>
                 Data Guru
@@ -62,7 +62,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('/datasiswa') }}" class="nav-link {{ request()->is('datasiswa') ? 'active' : '' }}">
+            <a href="{{ url('/datasiswa') }}" class="nav-link {{ request()->is('datasiswa') || request()->is('detailsiswa') || request()->is('editsiswa') || request()->is('tambahdatasiswa') ? 'active' : '' }}">
               <i class="nav-icon fas fa-solid fa-user"></i>
               <p>
                 Data Siswa
@@ -70,7 +70,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('/datauser') }}" class="nav-link {{ request()->is('datauser') ? 'active' : '' }}">
+            <a href="{{ url('/datauser') }}" class="nav-link {{ request()->is('datauser') || request()->is('tambahdata') || request()->is('edit') || request()->is('detailakun') ? 'active' : '' }}">
               <i class="nav-icon fas fa-solid fa-user-plus"></i>
               <p>
                 Data User

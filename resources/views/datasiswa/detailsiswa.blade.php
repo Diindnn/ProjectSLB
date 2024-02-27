@@ -173,11 +173,12 @@
                                     </div>
                                 </div>
 
-                                <div class="card-footer text-right" style="padding-right: 40px;">
+                                <div class="card-footer text-right" style="padding-right: 25px;">
                                     <!-- Mengatur tombol ke kanan dan mengubah warnanya -->
-                                    <button type="submit" class="btn"
-                                        style="background-color: #315E77; color: #ffffff; ">Tambahkan Data</button>
+                                    <a href="{{ route('editsiswa') }}" class="btn" style="background-color: #315E77; color: #ffffff;">Edit</a>
                                 </div>
+
+
 
                                 <!-- Pop-up berhasil ditambahkan -->
                                 <div class="modal fade" id="successModal" tabindex="-1" role="dialog"

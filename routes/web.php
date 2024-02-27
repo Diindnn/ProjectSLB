@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('layouts.content');
 });
+
+Route::get('/', function () {
+    return view('layouts.layout_guru.content_guru');
+});
+
+
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -59,6 +65,10 @@ Route::get('/editsiswa', function () {
     return view('datasiswa.editsiswa');
 })->name('editsiswa');
 
+Route::get('/edit', function () {
+    return view('datasiswa.edit');
+})->name('edit');
+
 
 //data user
 Route::get('/datauser', function () {
@@ -76,3 +86,40 @@ Route::get('/edit', function () {
 Route::get('/tambahdata', function () {
     return view('datauser.tambahdata');
 })->name('tambahdata');
+
+//fitur guru
+
+
+Route::get('/fitur_guru/profil', function () {
+    return view('fitur_guru.profil.profil_guru');
+})->name('profil_guru');
+
+//absensi
+Route::get('/fitur_guru/absensi_siswa/absensi', function () {
+    return view('fitur_guru.absensi_siswa.absensi');
+})->name('absensi');
+
+Route::get('/fitur_guru/absensi_siswa/rekap_absensi', function () {
+    return view('fitur_guru.absensi_siswa.rekap_absensi');
+})->name('absensi');
+
+//Dat perkembangan
+Route::get('/fitur_guru/data_perkembangan/juli', function () {
+    return view('/fitur_guru.data_perkembangan.juli');
+})->name('juli');
+
+Route::get('/fitur_guru/data_perkembangan/laporan_juli', function () {
+    return view('/fitur_guru.data_perkembangan.laporan_juli');
+})->name('laporan_juli');
+
+Route::get('/fitur_guru/data_perkembangan/tambah_data_juli', function () {
+    return view('/fitur_guru.data_perkembangan.tambah_data_juli');
+})->name('tambah_data_juli');
+
+
+//GRAFIK PERKEMBANGAN
+Route::get('/fitur_guru/grafik/grafik_ganjil', function () {
+    return view('fitur_guru.grafik.grafik_ganjil');
+})->name('grafik_ganjil');
+
+

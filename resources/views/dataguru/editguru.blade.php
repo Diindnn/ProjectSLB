@@ -21,7 +21,7 @@
     }
 
     .profile-icon {
-        font-size: 80px; /* Ukuran ikon */
+        font-size: 120px; /* Ukuran ikon */
         margin-bottom: 5px; /* Jarak antara ikon dan tulisan */
         align-content: center;
        color: #999696
@@ -38,9 +38,9 @@
     }
 
     .profile-box {
-    width: 120px;
-    height: 150px;
-    border: 2px solid #ccc;
+    width: 150px;
+    height: 190px;
+    border: 4px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     display: flex;
@@ -126,35 +126,35 @@
                                 <div class="col-md-9"> <!-- Kolom untuk input email address dan password -->
                                     <div class="form-group row">
                                         <div class="col-md-12"> <!-- Kolom untuk input email -->
-                                            <label for="exampleInputEmail1">Nama :</label>
+                                            <label for="exampleInputEmail1">Nama </label>
                                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Input Nama">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">NUPTK :</label>
+                                            <label for="exampleInputPassword1">NUPTK </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Nomor Induk Pegawai dan Tenaga Kependidikan">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Jenis Kelamin :</label>
+                                            <label for="exampleInputPassword1">Jenis Kelamin </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Inpu jenis kelamin">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Pendidikan Terakhir :</label>
+                                            <label for="exampleInputPassword1">Pendidikan Terakhir </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Pendidikan Terakhir">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Alamat :</label>
+                                            <label for="exampleInputPassword1">Alamat </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Alamat">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">NO.HP :</label>
+                                            <label for="exampleInputPassword1">NO.HP </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input no.hp">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Mengajar Kelas :</label>
+                                            <label for="exampleInputPassword1">Mengajar Kelas </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input kelas">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Email :</label>
+                                            <label for="exampleInputPassword1">Email </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Email">
                                         </div>
                                     </div>

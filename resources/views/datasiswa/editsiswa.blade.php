@@ -126,32 +126,32 @@
                                 <div class="col-md-9"> <!-- Kolom untuk input email address dan password -->
                                     <div class="form-group row">
                                         <div class="col-md-12"> <!-- Kolom untuk input email -->
-                                            <label for="exampleInputEmail1">Nama :</label>
+                                            <label for="exampleInputEmail1">Nama </label>
                                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Input Nama">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">NISN :</label>
+                                            <label for="exampleInputPassword1">NISN </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Nomor Induk Siswa Nasional">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Jenis Kelamin :</label>
+                                            <label for="exampleInputPassword1">Jenis Kelamin </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input jenis kelamin">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Kelas :</label>
+                                            <label for="exampleInputPassword1">Kelas </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Kelas">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Jenis Kebutuhan:</label>
+                                            <label for="exampleInputPassword1">Jenis Kebutuhan</label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Jenis Kebutuhan">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Alamat :</label>
+                                            <label for="exampleInputPassword1">Alamat </label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Alamat">
                                         </div>
 
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
-                                            <label for="exampleInputPassword1">Wali Murid:</label>
+                                            <label for="exampleInputPassword1">Wali Murid</label>
                                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Wali Murid">
                                         </div>
                                     </div>
@@ -160,7 +160,7 @@
                         </div>
 
                          <div class="card-footer text-right" style="padding-right: 40px;"> <!-- Mengatur tombol ke kanan dan mengubah warnanya -->
-                            <button type="submit" class="btn" style="background-color: #315E77; color: #ffffff; ">Tambahkan Data</button>
+                            <button type="submit" class="btn" style="background-color: #315E77; color: #ffffff; ">Simpan</button>
                         </div>
 
                          <!-- Pop-up berhasil ditambahkan -->
@@ -176,7 +176,7 @@
                                      </button>
                                  </div>
                                  <div class="modal-body">
-                                     Data berhasil ditambahkan.
+                                     Data berhasil disimpan.
                                  </div>
                                  <div class="modal-footer">
                                      <button type="button" class="btn btn-secondary" data-dismiss="modal"
