@@ -77,6 +77,26 @@
             /* Mengatur ketebalan font menjadi normal */
 
         }
+
+        /* Gaya tombol "Edit Data" */
+        .btn-edit-data {
+            background-color: #315E77;
+            color: #ffffff;
+            padding: 8px 16px;
+            /* Sesuaikan padding sesuai kebutuhan */
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            /* Animasi transisi */
+        }
+
+        /* Gaya tombol "Edit Data" saat dihover */
+        .btn-edit-data:hover {
+            background-color: #275067;
+            /* Ubah warna latar belakang saat dihover */
+            color: #ffffff;
+            /* Ubah warna teks saat dihover */
+        }
     </style>
 
 
@@ -95,8 +115,8 @@
 
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Detail Data Siswa</a></li>
-                            <li class="breadcrumb-item active">Data Siswa</li>
+                            <li class="breadcrumb-item"><a href="#">Data Siswa</a></li>
+                            <li class="breadcrumb-item active">Detail Data Siswa</li>
                         </ol>
                     </div>
                 </div>
@@ -121,12 +141,13 @@
                                 <div class="card-body mt-4">
                                     <div class="row">
                                         <div class="col-md-3"> <!-- Kotak file foto profil -->
-                                            <div class="form-group mt-1" style=" padding-left: 50px" 80px>
+                                            <div class="form-group mt-1" style="padding-left: 30%;">
                                                 <label for="exampleInputFile" class="profile-box">
-                                                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                    <img src="{{ asset('images') }}/profile.png" alt="Your Image"
-                                                        class="profile-icon">
-                                                    <label for="foto" class="file-labels">Tambah foto</label>
+                                                    <div class="logo-container text-center">
+                                                        <img src="{{ asset('images') }}/fotoguru.jpg" class="image"
+                                                            alt="SLB Insan Prima bestari"
+                                                            style="max-width: 100%; height: auto; ">
+                                                    </div>
                                                 </label>
                                             </div>
                                         </div>
@@ -134,39 +155,39 @@
                                             <div class="form-group row">
                                                 <div class="col-md-12"> <!-- Kolom untuk input email -->
                                                     <label for="exampleInputEmail1">Nama :</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                                        placeholder="Input Nama">
+                                                    <input type="name" class="form-control" id="exampleInputEmail1"
+                                                        placeholder="Nurul Awaliyah">
                                                 </div>
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">NISN :</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input Nomor Induk Siswa Nasional">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="12345678">
                                                 </div>
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">Jenis Kelamin :</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input jenis kelamin">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="Perempuan">
                                                 </div>
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">Kelas :</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input Kelas">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="5">
                                                 </div>
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">Jenis Kebutuhan:</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input Jenis Kebutuhan">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="Tunagrahita">
                                                 </div>
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">Alamat :</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input Alamat">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="JL.Nangka 1">
                                                 </div>
 
                                                 <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                                     <label for="exampleInputPassword1">Wali Murid:</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                                        placeholder="Input Wali Murid">
+                                                    <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                        placeholder="Siti Mutmainah">
                                                 </div>
                                             </div>
                                         </div>
@@ -174,8 +195,7 @@
                                 </div>
 
                                 <div class="card-footer text-right" style="padding-right: 25px;">
-                                    <!-- Mengatur tombol ke kanan dan mengubah warnanya -->
-                                    <a href="{{ route('editsiswa') }}" class="btn" style="background-color: #315E77; color: #ffffff;">Edit</a>
+                                    <a href="{{ route('editsiswa') }}" class="btn btn-edit-data">Edit Data</a>
                                 </div>
 
 

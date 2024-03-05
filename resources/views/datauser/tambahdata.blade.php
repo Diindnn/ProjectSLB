@@ -1,6 +1,23 @@
 @extends('layouts.master')
 
 @section('content')
+
+<style>
+    /* Gaya tombol submit */
+.btn-custom {
+    background-color: #315E77; /* Ganti dengan warna yang Anda inginkan */
+    color: #fff; /* Warna teks */
+    border: none; /* Hapus border jika tidak diperlukan */
+    transition: background-color 0.3s; /* Animasi transisi */
+}
+
+/* Gaya tombol submit saat dihover */
+.btn-custom:hover {
+    background-color: #275067; /* Ganti dengan warna hover yang Anda inginkan */
+    color: white;
+}
+
+</style>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -40,6 +57,12 @@
                             <!-- form start -->
                             <form role="form" id="addTeacherForm">
                                 <div class="card-body">
+                                    <p> <b>Akun Orang Tua</b></p>
+                                    <div class="form-group">
+                                        <label for="InputNama">Nama</label>
+                                        <input type="email" class="form-control" id="InputNama"
+                                            placeholder="Enter email">
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
@@ -50,29 +73,12 @@
                                         <input type="password" class="form-control" id="exampleInputPassword1"
                                             placeholder="Password">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">File input</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                            </div>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text" id="">Upload</span>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary"
-                                        style="background-color: blue; color: white; transition: background-color 0.3s;"
-                                        onmouseover="this.style.backgroundColor='darkblue'"
-                                        onmouseout="this.style.backgroundColor='blue'">
-                                        Submit
-                                    </button>
-
+                                    <button type="submit" class="btn btn-custom">Tambah Data</button>
                                 </div>
                                 <!-- Pop-up berhasil ditambahkan -->
                                 <div class="modal fade" id="successModal" tabindex="-1" role="dialog"

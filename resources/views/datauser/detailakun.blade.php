@@ -71,6 +71,19 @@
     input[type="file"] {
         display: none;
     }
+    /* Gaya tombol "Tambah Data" */
+.btn-tambah-data {
+    background-color: #315E77;
+    color: white;
+    transition: background-color 0.3s; /* Animasi transisi */
+}
+
+/* Gaya tombol "Tambah Data" saat dihover */
+.btn-tambah-data:hover {
+    background-color: #235068; /* Ubah warna latar belakang saat dihover */
+    color: white;
+}
+
 
 </style>
 
@@ -101,9 +114,10 @@
                     <div class="card-header" style="background: #315E77;"></div>
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center mt-4">
-                            <a href="{{ route('tambahdata') }}" class="btn ml-auto" style="background-color: #315E77; color:white">
+                            <a href="{{ route('tambahdata') }}" class="btn ml-auto btn-tambah-data">
                                 <i class="fas fa-plus"></i> Tambah Data
                             </a>
+
                         </div>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">

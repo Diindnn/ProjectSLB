@@ -70,6 +70,22 @@
     input[type="file"] {
         display: none;
     }
+    /* Gaya tombol "Tambah Data" */
+.btn-tambah-data {
+    background-color: #315E77;
+    color: #ffffff;
+    padding: 8px 16px; /* Sesuaikan padding sesuai kebutuhan */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
+
+/* Gaya tombol "Tambah Data" saat dihover */
+.btn-tambah-data:hover {
+    background-color: #275067; /* Ubah warna latar belakang saat dihover */
+    color: #ffffff; /* Ubah warna teks saat dihover */
+}
+
 
 </style>
 
@@ -97,11 +113,10 @@
                     <div class="card-header" style="background: #315E77;"></div>
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center mt-4">
-
-                            <!-- Button to Add Data -->
-                            <a href="{{ route('tambahdatasiswa') }}" class="btn ml-auto" style="background-color: #315E77; color:white">
+                            <a href="{{ route('tambahdatasiswa') }}" class="btn ml-auto btn-tambah-data">
                                 <i class="fas fa-plus"></i> Tambah Data
                             </a>
+
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -195,18 +210,12 @@
 
 <!-- jQuery -->
 <script src="{{asset('adminlte-v3')}}/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="{{asset('adminlte-v3')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables -->
 <script src="{{asset('adminlte-v3')}}/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="{{asset('adminlte-v3')}}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="{{asset('adminlte-v3')}}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="{{asset('adminlte-v3')}}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('adminlte-v3')}}/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('adminlte-v3')}}/dist/js/demo.js"></script>
-<!-- page script -->
+
 
 <script>
     $(function () {

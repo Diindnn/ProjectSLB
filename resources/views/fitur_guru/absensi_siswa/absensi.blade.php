@@ -2,6 +2,39 @@
 
 @section('content_guru')
     <style>
+
+         /* Aturan CSS untuk efek hover pada tombol "Tambah Data" */
+         #tambahDataButton {
+            background-color: #315E77; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            transition: background-color 0.3s, color 0.3s; /* Transisi untuk efek hover */
+            border: none; /* Hilangkan border */
+            padding: 8px 16px; /* Padding tombol */
+            border-radius: 4px; /* Radius sudut tombol */
+            cursor: pointer; /* Ubah cursor menjadi pointer saat dihover */
+        }
+
+        #tambahDataButton:hover {
+            background-color: #275067; /* Ubah warna latar belakang saat tombol dihover */
+        }
+
+        /* Aturan CSS untuk tombol "Simpan Data" */
+    #saveEditButton,
+    #saveEditButton1 {
+        background-color: #315E77; /* Warna latar belakang tombol */
+        color: white; /* Warna teks tombol */
+        border: none; /* Hilangkan border */
+        padding: 8px 16px; /* Padding tombol */
+        border-radius: 4px; /* Radius sudut tombol */
+        cursor: pointer; /* Ubah cursor menjadi pointer saat dihover */
+        transition: background-color 0.3s, color 0.3s; /* Transisi untuk efek hover */
+    }
+
+    /* Aturan CSS untuk efek hover pada tombol "Simpan Data" */
+    #saveEditButton:hover,
+    #saveEditButton1:hover {
+        background-color: #275067; /* Ubah warna latar belakang saat tombol dihover */
+    }
         .profile-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -104,14 +137,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h3>
-                            <a href="{{ url()->previous() }}" class="text-dark" style="font-size: 17px;">
-                                <i class="fas fa-arrow-left" style="padding-right: 15px;"></i></a>Absensi Siswa
-                        </h3>
+                        <h1>Absensi</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active">Absensi Siswa</li>
                         </ol>
                     </div>
@@ -125,11 +155,38 @@
                     <div class="card-primary">
                         <div class="card-header" style="background: #315E77;"></div>
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center mt-4">
-                                <a href="#" id="tambahDataButton" class="btn ml-auto"
-                                    style="background-color: #315E77; color:white">
-                                    <i class="fas fa-plus"></i> Tambah Data
-                                </a>
+                            <div class="card-header d-flex justify-content-between align-items-center mt-2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text">
+                                            <!-- Form filter -->
+                                            <form class="form-horizontal">
+                                                <div class="form-group row mt-5">
+                                                    <label for="inputKelas" class="col-md-2 col-form-label">Pilih Kelas</label>
+                                                    <div class="col-md-4">
+                                                        <select id="inputKelas" class="form-control">
+                                                            <option selected>Pilih...</option>
+                                                            <option>Kelas 1</option>
+                                                            <option>Kelas 2</option>
+                                                            <!-- Tambahkan pilihan kelas lainnya sesuai kebutuhan -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row mt-1">
+                                                <label for="inputTanggal" class="col-md-2 col-form-label">Pilih Tanggal</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" id="inputTanggal">
+                                                </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                        <!-- Tombol "Tambah Data" -->
+                                        <a href="#" id="tambahDataButton" class="btn ml-auto float-right">
+                                            <i class="fas fa-plus"></i> Tambah Data
+                                        </a>
+
+                                </div>
 
                                 <!-- Modal form absensi -->
                                 <div class="modal fade" id="formAbsensiModal" tabindex="-1" role="dialog"
@@ -210,39 +267,39 @@
                                                                 <td>2</td>
                                                                 <td>12345678</td>
                                                                 <td>Aslan Said</td>
-                                                                <td><input type="radio" name="status_1" value="hadir"
+                                                                <td><input type="radio" name="status_2" value="hadir"
                                                                         checked> </td>
-                                                                <td><input type="radio" name="status_1" value="sakit">
+                                                                <td><input type="radio" name="status_2" value="sakit">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="izin">
+                                                                <td><input type="radio" name="status_2" value="izin">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="alfa">
+                                                                <td><input type="radio" name="status_2" value="alfa">
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td>12345678</td>
                                                                 <td>Aslan Said</td>
-                                                                <td><input type="radio" name="status_1" value="hadir"
+                                                                <td><input type="radio" name="status_2" value="hadir"
                                                                         checked> </td>
-                                                                <td><input type="radio" name="status_1" value="sakit">
+                                                                <td><input type="radio" name="status_2" value="sakit">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="izin">
+                                                                <td><input type="radio" name="status_2" value="izin">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="alfa">
+                                                                <td><input type="radio" name="status_2" value="alfa">
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td>12345678</td>
                                                                 <td>Aslan Said</td>
-                                                                <td><input type="radio" name="status_1" value="hadir"
+                                                                <td><input type="radio" name="status_3" value="hadir"
                                                                         checked> </td>
-                                                                <td><input type="radio" name="status_1" value="sakit">
+                                                                <td><input type="radio" name="status_3" value="sakit">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="izin">
+                                                                <td><input type="radio" name="status_3" value="izin">
                                                                 </td>
-                                                                <td><input type="radio" name="status_1" value="alfa">
+                                                                <td><input type="radio" name="status_3" value="alfa">
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -418,18 +475,13 @@
     <!-- jQuery -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="{{ asset('adminlte-v3') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <!-- DataTables -->
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('adminlte-v3') }}/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('adminlte-v3') }}/dist/js/demo.js"></script>
-    <!-- page script -->
+
     <script>
         $(function() {
             $("#example1").DataTable({

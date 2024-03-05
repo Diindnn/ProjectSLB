@@ -68,6 +68,22 @@
         font-weight: 10; /* Mengatur ketebalan font menjadi normal */
 
     }
+    /* Gaya tombol "Tambahkan Data" */
+.btn-tambahkan {
+    background-color: #315E77;
+    color: #ffffff;
+    padding: 8px 16px; /* Sesuaikan padding sesuai kebutuhan */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
+
+/* Gaya tombol "Tambahkan Data" saat dihover */
+.btn-tambahkan:hover {
+    background-color: #275067; /* Ubah warna latar belakang saat dihover */
+    color: #ffffff; /* Ubah warna teks saat dihover */
+}
+
 
 
 
@@ -115,10 +131,11 @@
                         <div class="card-body mt-4">
                             <div class="row">
                                 <div class="col-md-3"> <!-- Kotak file foto profil -->
-                                    <div class="form-group mt-1"  style=" padding-left: 50px" 80px>
+                                    <div class="form-group mt-1" style=" padding-left: 50px" 80px>
                                         <label for="exampleInputFile" class="profile-box">
                                             <input type="file" class="custom-file-input" id="exampleInputFile">
-                                            <img src="{{asset('images')}}/profile.png" alt="Your Image" class="profile-icon">
+                                            <img src="{{ asset('images') }}/profile.png" alt="Your Image"
+                                                class="profile-icon">
                                             <label for="foto" class="file-labels">Tambah foto</label>
                                         </label>
                                     </div>
@@ -127,40 +144,46 @@
                                     <div class="form-group row">
                                         <div class="col-md-12"> <!-- Kolom untuk input email -->
                                             <label for="exampleInputEmail1">Nama :</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Input Nama">
+                                            <input type="name" class="form-control" id="exampleInputEmail1"
+                                                placeholder="Nurul Awaliyah">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">NISN :</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Nomor Induk Siswa Nasional">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="12345678">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">Jenis Kelamin :</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input jenis kelamin">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Perempuan">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">Kelas :</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Kelas">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="5">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">Jenis Kebutuhan:</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Jenis Kebutuhan">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Tunagrahita">
                                         </div>
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">Alamat :</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Alamat">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="JL.Nangka 1">
                                         </div>
 
                                         <div class="col-md-12 mt-3"> <!-- Kolom untuk input password -->
                                             <label for="exampleInputPassword1">Wali Murid:</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input Wali Murid">
+                                            <input type="pasname" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Siti Mutmainah">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                         <div class="card-footer text-right" style="padding-right: 40px;"> <!-- Mengatur tombol ke kanan dan mengubah warnanya -->
-                            <button type="submit" class="btn" style="background-color: #315E77; color: #ffffff; ">Tambahkan Data</button>
+                         <div class="card-footer text-right"> <!-- Mengatur tombol ke kanan dan mengubah warnanya -->
+                            <button type="submit" class="btn btn-tambahkan">Tambahkan Data</button>
                         </div>
 
                          <!-- Pop-up berhasil ditambahkan -->

@@ -24,7 +24,7 @@
     }
 
     .main-sidebar .nav-link.subactive {
-        background-color: #203E4E !important;
+        background-color: #264a5d !important;
         /* Ganti #your-desired-color dengan warna yang Anda inginkan */
         color: white !important;
         /* Mengubah warna teks menjadi putih */
@@ -42,7 +42,7 @@
                     alt="User Image" style="max-width: 100%; height: auto; width: 50%; height: 50%;">
             </div>
             <div class="info">
-                <a href="#" class="d-block" style="color: white;">Hi, Admin</a>
+                <a href="#" class="d-block" style="color: white;">Hi, Alfina</a>
             </div>
         </div>
 
@@ -71,7 +71,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ url('/datasiswa') }}" class="nav-link {{ request()->is('datasiswa') ? 'active' : '' }}">
+                    <a href="{{ url('/fitur_guru/absensi_siswa/absensi') }}"
+                    class="nav-link {{ request()->is('fitur_guru/absensi_siswa/absensi') || request()->is('fitur_guru/absensi_siswa/rekap_absensi')? 'active' : '' }}">
                         <i class="nav-icon fas fa-file-signature"></i>
                         <p>
                             Absensi
@@ -81,14 +82,14 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ url('/fitur_guru/absensi_siswa/absensi') }}"
-                            class="nav-link {{ request()->is('fitur_guru/absensi_siswa/absensi') ? 'active' : '' }}">
+                            class="nav-link {{ request()->is('fitur_guru/absensi_siswa/absensi') ? 'subactive' : '' }}">
                                 <i class="nav-icon fas fa-list" style="font-size: 18px; margin-right: 5px;"></i>
                                 <p style="margin-left: 5px;">Absensi Siswa</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ url('/fitur_guru/absensi_siswa/rekap_absensi') }}"
-                            class="nav-link {{ request()->is('rekap_absensi') ? 'active' : '' }}">
+                            class="nav-link {{ request()->is('fitur_guru/absensi_siswa/rekap_absensi') ? 'subactive' : '' }}">
                                 <i class="nav-icon fas fa-file" style="font-size: 18px; margin-right: 5px;"></i>
                                 <p style="margin-left: 5px;">Rekap Absensi </p>
                             </a>
@@ -98,7 +99,8 @@
 
 
                 <li class="nav-item">
-                    <a href="{{ url('/datauser') }}" class="nav-link {{ request()->is('datauser') ? 'active' : '' }}">
+                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_juli/juli') }}"
+                    class="nav-link {{ request()->is('fitur_guru/data_perkembangan/juli') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p style="margin-left: px;">
                             Data Perkembangan
@@ -114,7 +116,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ url('/fitur_guru/data_perkembangan/juli') }}"
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_juli/juli') }}"
                                     class="nav-link {{ request()->is('juli') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Juli</p>
@@ -123,7 +125,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_agustus/agustus') }}"
+                                    class="nav-link {{ request()->is('agustus') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Agustus</p>
                                     </a>
@@ -131,7 +134,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_september/september') }}"
+                                    class="nav-link {{ request()->is('september') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">September</p>
                                     </a>
@@ -139,7 +143,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_oktober/oktober') }}"
+                                    class="nav-link {{ request()->is('oktober') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Oktober</p>
                                     </a>
@@ -147,7 +152,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_november/november') }}"
+                                    class="nav-link{{ request()->is('november') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">November</p>
                                     </a>
@@ -155,7 +161,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_desember/desember') }}"
+                                    class="nav-link{{ request()->is('desember') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Desember</p>
                                     </a>
@@ -171,7 +178,8 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_januari/januari') }}"
+                                    class="nav-link{{ request()->is('januari') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Januari</p>
                                     </a>
@@ -179,7 +187,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_februari/februari') }}"
+                                    class="nav-link{{ request()->is('februari') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Februari</p>
                                     </a>
@@ -187,7 +196,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_maret/maret') }}"
+                                    class="nav-link{{ request()->is('maret') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Maret</p>
                                     </a>
@@ -195,7 +205,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_april/april') }}"
+                                    class="nav-link{{ request()->is('april') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">April</p>
                                     </a>
@@ -203,7 +214,8 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_mei/mei') }}"
+                                    class="nav-link{{ request()->is('mei') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Mei</p>
                                     </a>
@@ -211,7 +223,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" style="margin-left: 20px;">
+                                    <a href="{{ url('/fitur_guru/data_perkembangan/bulan_juni/juni') }}" class="nav-link{{ request()->is('juni') ? 'active' : '' }}" style="margin-left: 20px;">
                                         <i class="nav-icon fas fa-tachometer-alt" style="margin-right: 5px;"></i>
                                         <p style="margin-left: 5px;">Juni</p>
                                     </a>
@@ -222,25 +234,27 @@
                 </li>
 
 
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ request()->is('grafik_ganjil') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-chart-line"></i>
-                        <p>
-                            Grafik Perkembangan
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
+                    <a href="{{ url('/fitur_guru/grafik/grafik_ganjil') }}"
+                class="nav-link {{ request()->is('fitur_guru/grafik/grafik_ganjil') || request()->is('fitur_guru/grafik/grafik_genap')? 'active' : '' }}">
+                    <i class="nav-icon fas fa-chart-line"></i>
+                    <p>
+                        Grafik Perkembangan
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ url('/fitur_guru/grafik/grafik_ganjil') }}"
-                            class="nav-link {{ request()->is('grafik_ganjil') ? 'active' : '' }}">
+                            class="nav-link {{ request()->is('fitur_guru/grafik/grafik_ganjil') ? 'subactive' : '' }}">
                                 <i class="nav-icon far fa-calendar-alt" style="font-size: 18px; margin-right: 5px;"></i>
                                 <p style="margin-left: 5px;">Semester Ganjil</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('/fitur_guru/absensi_siswa/rekap_absensi') }}"
-                            class="nav-link {{ request()->is('rekap_absensi') ? 'active' : '' }}">
+                            <a href="{{ url('/fitur_guru/grafik/grafik_genap') }}"
+                            class="nav-link {{ request()->is('fitur_guru/grafik/grafik_genap') ? 'subactive' : '' }}">
                                 <i class="nav-icon far fa-calendar-alt" style="font-size: 18px; margin-right: 5px;"></i>
                                 <p style="margin-left: 5px;">Semester Genap </p>
                             </a>

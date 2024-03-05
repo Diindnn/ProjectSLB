@@ -109,8 +109,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Rekap Absensi</a></li>
-                            <li class="breadcrumb-item active">Home</li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Rekap Absensi</li>
                         </ol>
                     </div>
                 </div>
@@ -239,11 +239,7 @@
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="{{ asset('adminlte-v3') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('adminlte-v3') }}/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('adminlte-v3') }}/dist/js/demo.js"></script>
-    <!-- page script -->
+
     <script>
        $(function() {
     // Hancurkan instance DataTables yang sudah ada, jika ada
