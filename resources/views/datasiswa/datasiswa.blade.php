@@ -70,23 +70,26 @@
     input[type="file"] {
         display: none;
     }
+
     /* Gaya tombol "Tambah Data" */
-.btn-tambah-data {
-    background-color: #315E77;
-    color: #ffffff;
-    padding: 8px 16px; /* Sesuaikan padding sesuai kebutuhan */
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
-}
+    .btn-tambah-data {
+        background-color: #315E77;
+        color: #ffffff;
+        padding: 8px 16px;
+        /* Sesuaikan padding sesuai kebutuhan */
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+        /* Animasi transisi */
+    }
 
-/* Gaya tombol "Tambah Data" saat dihover */
-.btn-tambah-data:hover {
-    background-color: #275067; /* Ubah warna latar belakang saat dihover */
-    color: #ffffff; /* Ubah warna teks saat dihover */
-}
-
-
+    /* Gaya tombol "Tambah Data" saat dihover */
+    .btn-tambah-data:hover {
+        background-color: #275067;
+        /* Ubah warna latar belakang saat dihover */
+        color: #ffffff;
+        /* Ubah warna teks saat dihover */
+    }
 </style>
 
 <div class="content-wrapper">
@@ -132,42 +135,27 @@
                                     </tr>
                                 </thead>
                                 <tbody style="text-align: center">
+                                    @foreach($data as $d)
                                     <tr>
-                                        <td>1</td>
-                                        <td>987654321</td>
-                                        <td>Aslan Said</td>
-                                        <td>Tunagrahita</td>
-                                        <td>5</td>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$d->nisn}}</td>
+                                        <td>{{$d->nama}}</td>
+                                        <td>{{$d->jenis_kebutuhan}}</td>
+                                        <td>{{$d->kelas}}</td>
                                         <td>
-                                            <a href="{{ route('detailsiswa') }}" class="btn btn-success btn-sm">
+                                            <a href="{{ url('detailsiswa', $d->id) }}" class="btn btn-success btn-sm">
                                                 <i class="fas fa-info-circle"></i> Detail
                                             </a>
-                                            <a href="{{ route('editsiswa') }}" class="btn btn-info btn-sm">
+                                            <a href="{{ url('editsiswa', $d->id) }}" class="btn btn-info btn-sm">
                                                 <i class="fas fa-edit"></i> Edit
                                             </a>
-                                            <button type="button" class="btn btn-danger btn-sm deleteButton" data-id="1">
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                                                data-target="#delete{{$d->id}}">
                                                 <i class="fas fa-trash-alt"></i> Delete
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>123456789</td>
-                                        <td>Ahmad Dhani</td>
-                                        <td>Tunagrahita</td>
-                                        <td>5</td>
-                                        <td>
-                                            <a href="{{ route('detailsiswa') }}" class="btn btn-success btn-sm">
-                                                <i class="fas fa-info-circle"></i> Detail
-                                            </a>
-                                            <a href="{{ route('editsiswa') }}" class="btn btn-info btn-sm">
-                                                <i class="fas fa-edit"></i> Edit
-                                            </a>
-                                            <button type="button" class="btn btn-danger btn-sm deleteButton" data-id="2">
-                                                <i class="fas fa-trash-alt"></i> Delete
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -180,33 +168,41 @@
             <!-- /.row -->
         </div>
         <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
+</div>
+<!-- /.row -->
+</section>
+<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 
 <!-- Pop-up konfirmasi hapus -->
-<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+@foreach($data as $d)
+<div class="modal fade" id="delete{{$d->id}}" tabindex="-1" role="dialog"
+    aria-labelledby="delete{{$d->id}}Label" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteConfirmationModalLabel">Konfirmasi Hapus</h5>
+                <h5 class="modal-title" id="delete{{$d->id}}Label">Konfirmasi Hapus</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                Apakah Anda yakin ingin menghapus data ini?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #315E77;">Batal</button>
-                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Hapus</button>
-            </div>
+            <form action="{{url('hapusdatasiswa')}}" method="post">
+                @csrf
+                <div class="modal-body">
+                    Apakah Anda yakin ingin menghapus data ini?
+                    <input type="hidden" id="deleteItemId" name="id" value="{{$d->id}}">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        style="background-color: #315E77;">Batal</button>
+                    <button type="submit" class="btn btn-danger" id="confirmDeleteButton">Hapus</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+@endforeach
 
 <!-- jQuery -->
 <script src="{{asset('adminlte-v3')}}/plugins/jquery/jquery.min.js"></script>
@@ -226,23 +222,17 @@
 
         // Tambahkan event listener ke semua tombol hapus
         var deleteButtons = document.querySelectorAll('.deleteButton');
-        deleteButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var id = this.getAttribute('data-id'); // Ambil id dari tombol hapus
+        deleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var itemId = $(this).data('id');
+                $('#deleteItemId').val(itemId);
                 $('#deleteConfirmationModal').modal('show'); // Tampilkan modal konfirmasi
-                // Set id pada tombol konfirmasi hapus
-                $('#confirmDeleteButton').attr('data-id', id);
             });
         });
 
         // Menangani klik tombol konfirmasi hapus
-        $('#confirmDeleteButton').click(function() {
-            var id = $(this).attr('data-id'); // Ambil id dari tombol konfirmasi hapus
-            // Di sini Anda dapat menambahkan logika penghapusan data jika diperlukan
-            // Kemudian Anda bisa menutup modal konfirmasi setelah penghapusan berhasil dilakukan
+        $('#confirmDeleteButton').click(function () {
             $('#deleteConfirmationModal').modal('hide');
-            // Tambahkan logika penghapusan data dengan menggunakan id yang telah diperoleh
-            console.log('Data dengan id ' + id + ' telah dihapus.');
         });
     });
 </script>

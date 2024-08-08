@@ -42,7 +42,7 @@
                 <i class="fas fa-user-circle fa-5x" style="color: rgb(251, 242, 242);"></i>
             </div>
             <div class="info">
-                <a href="#" class="d-block" style="color: white;">Hi, Admin</a>
+                <a href="#" class="d-block" style="color: white;">Hi, {{ auth()->user()->name }}</a>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
 
                 <li class="nav-item">
                     <a href="{{ url('/dataguru') }}"
-                        class="nav-link {{ request()->is('dataguru') || request()->is('tambahdataguru') || request()->is('detailguru') || request()->is('editguru') ? 'active' : '' }}">
+                        class="nav-link {{ request()->is('dataguru') || request()->is('tambahdataguru') || request()->is('detailguru/*') || request()->is('editguru/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-solid fa-user-tie"></i>
                         <p>
                             Data Guru
@@ -72,7 +72,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/datasiswa') }}"
-                        class="nav-link {{ request()->is('datasiswa') || request()->is('detailsiswa') || request()->is('editsiswa') || request()->is('tambahdatasiswa') ? 'active' : '' }}">
+                        class="nav-link {{ request()->is('datasiswa') || request()->is('detailsiswa/*') || request()->is('editsiswa/*') || request()->is('tambahdatasiswa') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-solid fa-user"></i>
                         <p>
                             Data Siswa
@@ -81,7 +81,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/datauser') }}"
-                        class="nav-link {{ request()->is('datauser') || request()->is('tambahdata') || request()->is('edit') || request()->is('detailakun') ? 'active' : '' }}">
+                        class="nav-link {{ request()->is('datauser') || request()->is('tambahakun-ortu') || request()->is('tambahakun-guru')  || request()->is('editakun*') || request()->is('detailakun-ortu') || request()->is('detailakun-guru') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-solid fa-user-plus"></i>
                         <p>
                             Data User

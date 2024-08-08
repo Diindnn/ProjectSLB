@@ -7,7 +7,7 @@
     <title>AdminLTE 3 | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="{{ asset('images') }}/logoslb.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('adminlte-v3') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -25,21 +25,27 @@
             margin-right: 10px;
             padding-right: 20px;
         }
+
         .social-auth-links {
             margin-left: 10px;
             margin-right: 10px;
         }
+
         /* Ganti warna background tombol login */
         .btn-custom {
-            background-color: #315E77; /* Ganti dengan warna pilihan Anda */
+            background-color: #315E77;
+            /* Ganti dengan warna pilihan Anda */
             color: white;
         }
+
         /* Ganti warna teks tombol login */
         .btn-custom:hover,
         .btn-custom:active,
         .btn-custom:focus {
-            background-color: #275067; /* Ganti dengan warna pilihan Anda saat tombol hover/active/focus */
-            color: white; /* Ganti dengan warna teks yang kontras */
+            background-color: #275067;
+            /* Ganti dengan warna pilihan Anda saat tombol hover/active/focus */
+            color: white;
+            /* Ganti dengan warna teks yang kontras */
         }
     </style>
 </head>
@@ -58,9 +64,10 @@
             </div>
             <div class="card-body login-card-body rounded-bottom" style="padding-top: 0;">
                 <p class="login-box-msg">Login menggunakan akun terdaftar</p>
-                <form action="../../index3.html" method="post">
+                <form action="{{ url('login') }}" method="post">
+                    @csrf
                     <div class="input-group mb-2">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -68,21 +75,32 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
                     </div>
+                    @error('email')
+                    <p class="text-danger">{{ $message }}</p>
+                    @enderror
+                    @error('password')
+                    <p class="text-danger">{{ $message }}</p>
+                    @enderror
+
+                    @if(session('error'))
+                    <p class="text-danger">{{ session('error') }}</p>
+                    @endif
+
+                    <div class="social-auth-links text-center mb-5">
+                        <!-- Ganti kelas tombol menjadi .btn-custom -->
+                        <button type="submit" class="btn btn-block btn-custom">
+                            <i class=""></i> Login
+                        </button>
+                    </div>
                 </form>
 
-                <div class="social-auth-links text-center mb-5">
-                    <!-- Ganti kelas tombol menjadi .btn-custom -->
-                    <a href="#" class="btn btn-block btn-custom">
-                        <i class=""></i> Login
-                    </a>
-                </div>
             </div>
             <!-- /.login-card-body -->
         </div>
